@@ -37,7 +37,7 @@ LSFT_T(KC_TAB),   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                     
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX,                      XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT,XXXXXXX,  KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_BRID, KC_BRIU, KC_MUTE, XXXXXXX, XXXXXXX, KC_VOLD,                      KC_VOLD, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, KC_PSCR,
+      KC_BRID, KC_BRIU, KC_MUTE, XXXXXXX, XXXXXXX, KC_VOLD,                      KC_VOLU, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, KC_PSCR,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                         KC_LGUI, _______, XXXXXXX,     _______,   LT(3, KC_ENT), KC_LGUI
                                       //`--------------------------'  `--------------------------'
@@ -121,3 +121,55 @@ LSFT_T(KC_TAB),   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                     
                                       //`--------------------------'  `--------------------------'
   )
 };
+
+enum layers_names {
+    _Default,
+    _Arrows,
+    _Symbols,
+    _Numbers,
+    _Adjust,
+    _Moba,
+    _Moba_2,
+    _AWSD,
+    _AWSD_2
+}
+
+//Draw to OLED
+bool oled_task_user() {
+    //Set cursor position
+    oled_set_cursor(0,1);
+
+    //Switch on current active layer
+    switch (get_highest_layer(layers_state)){
+        case _Default:
+            oled_write("Main Layer", false);
+            break;
+        case _Arrows:
+            oled_write("Main Layer", false);
+            break;
+        case _Symbols:
+            oled_write("Main Layer", false);
+            break;
+        case _Adjust:
+            oled_write("Main Layer", false);
+            break;
+        case _Moba:
+            oled_write("Main Layer", false);
+            break;
+        case _Moba_2:
+            oled_write("Main Layer", false);
+            break;
+        case _AWSD:
+            oled_write("Main Layer", false);
+            break;
+        case _AWSD_2:
+            oled_write("Main Layer", false);
+            break;
+
+        default:
+            oled_write("UKNOWN", false);
+            break;
+    }
+
+    return false;
+}
