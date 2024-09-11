@@ -15,7 +15,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-
 #include QMK_KEYBOARD_H
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -31,6 +30,7 @@ LSFT_T(KC_TAB),   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                     
                                   KC_LALT,   LT(1, KC_LGUI),  KC_SPC,     LGUI_T(KC_SPC),   LT(2, KC_ENT), KC_RALT
                                       //`--------------------------'  `--------------------------'
   ),
+
     [1] = LAYOUT_split_3x6_3( // Arrows
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_INS,                      XXXXXXX, KC_HOME,   KC_UP,  KC_END, XXXXXXX, KC_BSPC,
@@ -41,7 +41,8 @@ LSFT_T(KC_TAB),   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                     
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                         KC_LGUI, _______, XXXXXXX,     _______,   LT(3, KC_ENT), KC_LGUI
                                       //`--------------------------'  `--------------------------'
-  ),//
+  ),
+
     [2] = LAYOUT_split_3x6_3( // Symbols  
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       KC_TILD, KC_EXLM,   KC_AT, KC_LPRN, KC_RPRN, KC_PEQL,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_MINS, KC_PLUS, XXXXXXX,
@@ -75,7 +76,7 @@ LSFT_T(KC_TAB),   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                     
                                           XXXXXXX,  XXXXXXX,  KC_SPC,     KC_SPC, XXXXXXX, KC_P0
                                       //`--------------------------'  `--------------------------'
   ),
-  [5] = LAYOUT_split_3x6_3( //MOBAS
+    [5] = LAYOUT_split_3x6_3( //MOBAS
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_TAB,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -114,8 +115,9 @@ LSFT_T(KC_TAB),   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                     
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, TG(7),
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   TG(7),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LALT,  KC_SPC, _______,     KC_ENT,   KC_ENT, KC_LGUI
                                       //`--------------------------'  `--------------------------'
+  )
 };
