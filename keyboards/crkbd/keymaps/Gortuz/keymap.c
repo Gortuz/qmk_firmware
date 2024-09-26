@@ -46,7 +46,7 @@ LCTL_T(KC_TAB),   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                     
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       KC_TILD, KC_EXLM,   KC_AT, KC_LPRN, KC_RPRN,  KC_EQL,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_MINS, KC_PLUS, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR,  KC_DLR,                      KC_HASH, KC_PSLS, KC_BSLS, KC_PIPE, XXXXXXX,KC_GRAVE,
+      XXXXXXX, XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR,  KC_DLR,                      KC_HASH, KC_PSLS, KC_BSLS, KC_PIPE, KC_PERC,KC_GRAVE,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
